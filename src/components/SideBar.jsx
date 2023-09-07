@@ -32,7 +32,7 @@ export default function SideBar() {
           onClick={() => navigate("/")}
         />
       </div>
-      <h1 className="mb-4 text-[#A4A4A4]">Processes</h1>
+      <h1 className="mb-4 text-[#A4A4A4] font-bold">Processes</h1>
       <ul className="ml-4">
         {isLoading && <div>Loading</div>}
         {processes.map((e) => (
