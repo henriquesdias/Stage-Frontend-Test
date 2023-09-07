@@ -1,10 +1,11 @@
-import { useLocation, useNavigate } from "react-router";
+import { useLocation, useNavigate, useParams } from "react-router";
 
 import PrincipalWrapper from "../components/PrincipalWrapper";
 import Subprocesses from "../components/Subprocesses";
 
 export default function Process() {
   const { state } = useLocation();
+  const { process_id } = useParams();
   const navigate = useNavigate();
   return (
     <PrincipalWrapper title={state.title}>
