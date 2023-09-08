@@ -6,14 +6,14 @@ import { TextField, Button } from "@mui/material";
 import eventsRequests from "../api/events";
 
 export default function CreateEvent() {
-  const { state } = useLocation();
+  const { state: subprocess_id } = useLocation();
   const [isDisabled, setIsDisabled] = useState(false);
   const [event, setEvent] = useState({
     title: "",
     notes: "",
     date: "",
     time: "",
-    subprocess_id: state,
+    subprocess_id,
   });
   const dateObj = new Date();
   const navigate = useNavigate();
