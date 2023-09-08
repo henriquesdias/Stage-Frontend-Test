@@ -15,7 +15,12 @@ export default function Event({ event }) {
       >
         <span className="text-center">{event.title}</span>
       </div>
-      <Dialog open={open} onClose={() => setOpen(false)}>
+      <Dialog
+        open={open}
+        onClose={() => setOpen(false)}
+        aria-labelledby="event-model"
+        aria-describedby="event-model"
+      >
         <DialogTitle id="event-model">{event.title}</DialogTitle>
         <DialogContent>
           <DialogContentText id="event-model">
