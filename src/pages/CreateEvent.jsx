@@ -31,7 +31,7 @@ export default function CreateEvent() {
       });
   }
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-screen">
+    <div className="flex flex-col justify-center items-center h-screen w-screen bg-[#F0F0F0]">
       <form
         className="flex flex-col w-50 border-2 border-gray-950 border-solid rounded-xl p-12 mx-4 text-lg"
         onSubmit={createEvent}
@@ -48,7 +48,7 @@ export default function CreateEvent() {
           id="date"
           type="date"
           name="date"
-          className="outline-none mb-4"
+          className="outline-none mb-4 bg-[#F0F0F0]"
           value={event.date}
           min={dateObj.toISOString().split("T")[0]}
           required
@@ -61,7 +61,7 @@ export default function CreateEvent() {
           type="time"
           name="time"
           id="time"
-          className="outline-none mb-4"
+          className="outline-none mb-4 bg-[#F0F0F0]"
           required
           value={event.time}
           onChange={(e) =>

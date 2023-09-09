@@ -5,7 +5,7 @@ import SideBar from "./SideBar";
 export default function PrincipalWrapper({ children, title }) {
   const [showIconsDelete, setShowIconsDelete] = useState(false);
   return (
-    <main className="flex h-screen w-screen">
+    <main className="flex min-h-screen w-full bg-[#F0F0F0]">
       <SideBar
         showIconsDelete={showIconsDelete}
         setShowIconsDelete={setShowIconsDelete}

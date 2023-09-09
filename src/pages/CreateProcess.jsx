@@ -27,7 +27,7 @@ export default function CreateProcess() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen w-screen">
+    <div className="flex flex-col justify-center items-center h-screen w-screen bg-[#F0F0F0]">
       <form
         className="flex flex-col w-50 border-2 border-gray-950 border-solid rounded-xl p-12 mx-4"
         onSubmit={submitData}

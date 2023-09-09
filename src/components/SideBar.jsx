@@ -33,7 +33,7 @@ export default function SideBar({ setShowIconsDelete, showIconsDelete }) {
   }
   return (
     <>
-      <aside className="h-full w-60  border-r-2 border-solid border-[#e8e8e8] p-4 text-lg relative">
+      <aside className="min-h-screen w-64  border-r-2 border-solid border-[#e8e8e8] p-4 text-lg relative">
         <AiTwotoneHome
           className="text-3xl mx-auto mb-8 cursor-pointer"
           onClick={() => navigate("/")}
