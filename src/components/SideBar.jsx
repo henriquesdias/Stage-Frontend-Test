@@ -10,6 +10,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 import useProcesses from "../customHook/useProcesses";
 import processesRequests from "../api/processes";
+import DefaultLoading from "../styles/Loading";
 
 export default function SideBar({ setShowIconsDelete, showIconsDelete }) {
   const { processes, isLoading } = useProcesses();
@@ -40,7 +41,7 @@ export default function SideBar({ setShowIconsDelete, showIconsDelete }) {
         />
         <h1 className="mb-4 text-[#A4A4A4] font-bold">Processes</h1>
         <ul className="ml-4">
-          {isLoading && <div>Loading</div>}
+          {isLoading && <DefaultLoading />}
           {processes.map((e) => (
             <li
               className="flex items-center justify-between gap-2 mb-2.5 cursor-pointer"

@@ -19,7 +19,7 @@ export default function Process() {
         <span className="text-4xl">+</span>
       </div>
       <h1 className="ml-6 mb-8 text-[#A4A4A4] font-bold">Subprocesses</h1>
-      <Subprocesses process_id={state.id} />
+      <Subprocesses process_id={process_id} />
     </PrincipalWrapper>
   );
 }

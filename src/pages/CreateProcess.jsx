@@ -45,6 +45,7 @@ export default function CreateProcess() {
             label="Title"
             name="title"
             value={process.title}
+            required
             onChange={(e) =>
               setProcess({ ...process, [e.target.name]: e.target.value })
             }
@@ -52,6 +53,7 @@ export default function CreateProcess() {
           <TextField
             label="Description"
             name="description"
+            required
             value={process.description}
             onChange={(e) =>
               setProcess({ ...process, [e.target.name]: e.target.value })
