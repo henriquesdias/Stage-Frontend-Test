@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 import { GrAddCircle } from "react-icons/gr";
 import { BsTrash } from "react-icons/bs";
@@ -9,11 +11,10 @@ import DialogTitle from "@mui/material/DialogTitle";
 import eventsRequests from "../api/events";
 import Event from "./Event";
 import useEvents from "../customHook/useEvents";
-
-import { useState } from "react";
+import DefaultLoading from "../styles/Loading";
 
 export default function Events({ subprocess_id }) {
-  const [events, setEvents] = useEvents(subprocess_id);
+  const { events, setEvents, isLoading } = useEvents(subprocess_id);
   const [eventId, setEventId] = useState();
   const [open, setOpen] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
@@ -47,6 +48,7 @@ export default function Events({ subprocess_id }) {
           />
         </span>
         <div className="flex gap-8 h-36">
+          {isLoading && <DefaultLoading />}
           {events.map((e) => (
             <div key={e.id} className="relative">
               <BsTrash

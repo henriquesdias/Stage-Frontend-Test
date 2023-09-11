@@ -5,6 +5,7 @@ import subprocessesRequests from "../api/subprocesses";
 export default function useSubprocesses(process_id) {
   const [subprocesses, setSubprocesses] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     setIsLoading(true);
     subprocessesRequests

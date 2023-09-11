@@ -6,6 +6,7 @@ import { BsTrash } from "react-icons/bs";
 import DialogModel from "./DialogModel";
 import useSubprocesses from "../customHook/useSubprocesses";
 import subprocessesRequests from "../api/subprocesses";
+import DefaultLoading from "../styles/Loading";
 
 export default function Subprocesses({ process_id }) {
   const { subprocesses, setSubprocesses, isLoading } =
@@ -31,7 +32,8 @@ export default function Subprocesses({ process_id }) {
   return (
     <>
       <ul className="ml-6 flex flex-wrap gap-4">
-        {subprocesses.length === 0 && <p>No subprocesses registered yet.</p>}
+        {!subprocesses && <p>No subprocesses registered yet.</p>}
+        {isLoading && <DefaultLoading />}
         {subprocesses.map((e) => (
           <div key={e.id} className="relative">
             <li
